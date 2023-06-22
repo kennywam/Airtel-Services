@@ -4,7 +4,7 @@ import { Stack, useRouter } from 'expo-router';
 import { Text } from 'react-native';
 
 import { COLORS, icons, images, SIZES, FONTS } from '../constants';
-import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components';
+import { commonservices, Commonservices, ScreenHeaderBtn, Welcome } from '../components';
 const Home = () => {
     const router = useRouter();
     return (
@@ -31,8 +31,8 @@ const Home = () => {
                     <Welcome
 
                     />
-                    <Popularjobs />
-                    <Nearbyjobs />
+                
+                    <Commonservices />
                 </View>
             </ScrollView>
         </SafeAreaView>

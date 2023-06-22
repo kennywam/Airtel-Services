@@ -10,11 +10,11 @@ import { icons, SIZES } from '../../../constants'
 const Welcome = () => {
   const router = useRouter()
   return (
-    <>
+    <View>
       <View style={styles.container}>
-      <Text style={styles.userName}>Hello Kennedy</Text>
-      <Text style={styles.welcomeMessage}>Find your perfect job</Text>
-    </View>
+        <Text style={styles.userName}>Hello Kennedy</Text>
+        <Text style={styles.welcomeMessage}>Welcome to Airtel Services</Text>
+      </View>
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
           <TextInput
@@ -25,16 +25,18 @@ const Welcome = () => {
           />
         </View>
 
-        <TouchableOpacity style = {styles.searchBtn} onPress={() => {}}> 
+        <TouchableOpacity style={styles.searchBtn} onPress={() => { }}>
           <Image
             source={icons.search}
             resizeMode='contain'
-            style ={styles.searchBtnImage}
+            style={styles.searchBtnImage}
           />
         </TouchableOpacity>
-
       </View>
-    </>
+      <View style = {styles.tabsContainer}>
+          <FlatList />
+      </View>
+    </View>
 
   )
 }
