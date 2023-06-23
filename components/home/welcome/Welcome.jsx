@@ -7,10 +7,12 @@ import { useRouter } from 'expo-router';
 import styles from './welcome.style';
 import { icons, SIZES } from '../../../constants'
 
+const services = ['Airtel-Money', 'Airtel-Data', 'Custormer care']
 const Welcome = () => {
   const router = useRouter()
+  const [activeService, setActiveService] = useState('Airtel-Money')
   return (
-    <View>
+    <>
       <View style={styles.container}>
         <Text style={styles.userName}>Hello Kennedy</Text>
         <Text style={styles.welcomeMessage}>Welcome to Airtel Services</Text>
@@ -20,7 +22,7 @@ const Welcome = () => {
           <TextInput
             style={styles.searchInput}
             value=''
-            onChange={() => { }}
+            onChange={() => {}}
             placeholder='What are you looking for?'
           />
         </View>
@@ -33,10 +35,26 @@ const Welcome = () => {
           />
         </TouchableOpacity>
       </View>
-      <View style = {styles.tabsContainer}>
-          <FlatList />
+      <View style={styles.tabsContainer}>
+        <FlatList
+          data={services}
+          renderItem={({ item }) => (
+            <TouchableOpacity
+              style={styles.tab(activeService, item)}
+              onPress={() => {
+                setActiveService(item)
+                router.push('/search/${item}')
+              }}
+            >
+              <Text style = {styles.tabText(activeService)}>{item}</Text>
+            </TouchableOpacity>
+          )}
+          keyExtractor={item => item}
+          contentContainerStyle={{ columnGap: SIZES.small }}
+          horizontal
+        />
       </View>
-    </View>
+    </>
 
   )
 }
