@@ -31,7 +31,7 @@ const Home = () => {
                     <Welcome
 
                     />
-                
+
                     <Commonservices />
                 </View>
             </ScrollView>
