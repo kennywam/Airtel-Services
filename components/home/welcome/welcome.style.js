@@ -56,16 +56,16 @@ const styles = StyleSheet.create({
     width: "100%",
     marginTop: SIZES.medium,
   },
-  tab: (activeJobType, item) => ({
+  tab: (activeService, item) => ({
     paddingVertical: SIZES.small / 2,
     paddingHorizontal: SIZES.small,
     borderRadius: SIZES.medium,
     borderWidth: 1,
-    borderColor: activeJobType === item ? COLORS.secondary : COLORS.gray2,
+    borderColor: activeService === item ? COLORS.secondary : COLORS.gray2,
   }),
-  tabText: (activeJobType, item) => ({
+  tabText: (activeService, item) => ({
     fontFamily: FONT.medium,
-    color: activeJobType === item ? COLORS.secondary : COLORS.gray2,
+    color: activeService === item ? COLORS.secondary : COLORS.gray2,
   }),
 });
 
