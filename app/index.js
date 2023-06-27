@@ -4,7 +4,7 @@ import { Stack, useRouter } from 'expo-router';
 import { Text } from 'react-native';
 
 import { COLORS, icons, images, SIZES, FONTS } from '../constants';
-import { commonservices, Commonservices, ScreenHeaderBtn, Welcome } from '../components';
+import { commonservices, Commonservices, Popularservices, ScreenHeaderBtn, Welcome } from '../components';
 const Home = () => {
     const router = useRouter();
     return (
@@ -28,11 +28,8 @@ const Home = () => {
                     padding: SIZES.medium
                 }}
                 >
-                    <Welcome
-
-                    />
-
-                    <Commonservices />
+                    <Welcome/>
+                    <Popularservices/>
                 </View>
             </ScrollView>
         </SafeAreaView>

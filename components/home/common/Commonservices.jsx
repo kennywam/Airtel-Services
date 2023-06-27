@@ -6,7 +6,9 @@ import { View, Text } from 'react-native'
 const Commonservices = () => {
   return (
     <View>
-      <Text></Text>
+      <Text>
+        Commonservices
+      </Text>
     </View>
   )
 }
