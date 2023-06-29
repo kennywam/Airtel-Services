@@ -7,6 +7,7 @@ import { useRouter } from 'expo-router'
 import styles from './popularservices.style'
 import { COLORS, SIZES } from '../../../constants';
 import PopularServiceCard from '../../common/cards/popular/PopularServiceCard'
+import useFetch from '../../../hooks/useFetch'
 const Popularservices = () => {
   const router = useRouter();
   const isLoading = false;
