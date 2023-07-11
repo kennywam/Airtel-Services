@@ -10,9 +10,15 @@ import PopularServiceCard from '../../common/cards/popular/PopularServiceCard'
 import useFetch from '../../../hooks/useFetch'
 const Popularservices = () => {
   const router = useRouter();
-  const isLoading = false;
-  const error = false;
 
+  const { data, isLoading, error } = useFetch(
+    'search', {
+    query: 'React developer',
+    num_pages: 1
+  }
+  )
+
+  console.log(data)
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -36,9 +42,9 @@ const Popularservices = () => {
                 item={item}
               />
             )}
-                keyExtractor={item => item?.service_id}
-                contentContainerStyle={{ columnGap: SIZES.medium }}
-                horizontal
+            keyExtractor={item => item?.service_id}
+            contentContainerStyle={{ columnGap: SIZES.medium }}
+            horizontal
           />
         )}
       </View>
