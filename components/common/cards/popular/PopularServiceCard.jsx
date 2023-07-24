@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, Text, Image } from 'react-native'
 
 import styles from './popularservicecard.style'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const PopularServiceCard = () => {
+const PopularServiceCard = ({ item, selectedJob, handleCardPress }) => {
   return (
 
     <TouchableOpacity
